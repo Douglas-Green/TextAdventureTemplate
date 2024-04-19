@@ -1,0 +1,115 @@
+/* Text color for different fear levels */
+.text-low-fear {
+  color: #4CAF50; /* Green for low fear */
+}
+
+.text-medium-fear {
+  color: #FFEB3B; /* Yellow for medium fear */
+}
+
+.text-high-fear {
+  color: #F44336; /* Red for high fear */
+}
+
+/* General body and HTML styling */
+html, body {
+    height: 100%;
+    margin: 0;
+    background-color: #121212; /* Dark background for a horror theme */
+    color: #e0e0e0; /* Light grey text for contrast */
+    font-family: 'Courier New', Courier, monospace; /* Monospaced font for classic horror feel */
+}
+
+/* Centering the game container */
+#game-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+/* Styling for story text */
+#story {
+    font-size: 2.2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+    padding: 0 2rem;
+}
+
+/* Flex container for buttons */
+#buttons-container {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+}
+
+/* Styling for horror-themed buttons */
+.choice-btn {
+    font-size: 2rem;
+    background-color: #1c1c1c; /* Very dark grey, almost black */
+    color: #e0e0e0; /* Light grey to stand out */
+    border: none;
+    padding: 1rem 2rem;
+    margin: 0.5rem;
+    cursor: pointer;
+    border-radius: 4px; /* Slightly rounded edges */
+    transition: filter 0.3s, transform 0.2s; /* Smooth transitions for hover effects */
+    text-transform: uppercase; /* Makes text uppercase for emphasis */
+    letter-spacing: 1px; /* Increases letter spacing for a stylized look */
+    box-shadow: 0 3px 6px rgba(0, 0, 0, 0.7); /* Deep shadow for a 3D effect */
+    animation: none; /* default to no animation */}
+
+.choice-btn:hover {
+    filter: brightness(120%); /* Brightens button on hover for interactive feel */
+    transform: translateY(-2px); /* Subtle lift effect on hover */
+}
+
+.choice-btn:focus {
+    background-color: #292929; /* Slightly lighter shade on focus */
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.5); /* White glow for accessibility */
+    outline: none;
+}
+
+.choice-btn:active {
+    transform: translateY(1px); /* Button appears to be pressed down */
+}
+
+.choice-btn.bounce {
+  animation: bounce 1s ease-in-out; /* Bounce animation for selected button */
+}
+
+.choice-btn.bounce-delay {
+  animation: bounce 1s ease-in-out;
+  animation-delay: 0.2s;
+}
+
+/* Responsive design adjustments */
+@media (max-width: 600px) {
+    #story, .choice-btn {
+        font-size: 1.8rem; /* Smaller text and buttons for small devices */
+    }
+
+    .choice-btn {
+        padding: 0.8rem 1.6rem;
+    }
+}
+
+@keyframes bounce {
+  0%, 100% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  25% {
+    transform: translateY(-20px);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  50% {
+    transform: translateY(0);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+  75% {
+    transform: translateY(-10px);
+    animation-timing-function: cubic-bezier(0.8, 0, 1, 1);
+  }
+}
